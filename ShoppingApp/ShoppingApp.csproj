@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6B9D2CF5-C0BB-4BD9-A1B4-5A90554CA962}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ShoppingApp</RootNamespace>
+    <AssemblyName>ShoppingApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.2.4, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.4\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="data\Bill.cs" />
+    <Compile Include="data\Cart.cs" />
+    <Compile Include="data\Meals.cs" />
+    <Compile Include="FormBills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBills.Designer.cs">
+      <DependentUpon>FormBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCancelMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCancelMessage.Designer.cs">
+      <DependentUpon>FormCancelMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCart.Designer.cs">
+      <DependentUpon>FormCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCategory.Designer.cs">
+      <DependentUpon>FormCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHome.Designer.cs">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearch.Designer.cs">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlCartItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlCartItem.Designer.cs">
+      <DependentUpon>UserControlCartItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlCanceledBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlCanceledBill.Designer.cs">
+      <DependentUpon>UserControlCanceledBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlDeliveringMeal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlDeliveringMeal.Designer.cs">
+      <DependentUpon>UserControlDeliveringMeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlMeal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlMeal.Designer.cs">
+      <DependentUpon>UserControlMeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlMealSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlMealSearch.Designer.cs">
+      <DependentUpon>UserControlMealSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlDeliveringBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlDeliveringBill.Designer.cs">
+      <DependentUpon>UserControlDeliveringBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlPendingBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPendingBill.Designer.cs">
+      <DependentUpon>UserControlPendingBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlPendingMeal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPendingMeal.Designer.cs">
+      <DependentUpon>UserControlPendingMeal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormBills.resx">
+      <DependentUpon>FormBills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCancelMessage.resx">
+      <DependentUpon>FormCancelMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCart.resx">
+      <DependentUpon>FormCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCategory.resx">
+      <DependentUpon>FormCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHome.resx">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearch.resx">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControlCartItem.resx">
+      <DependentUpon>UserControlCartItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlCanceledBill.resx">
+      <DependentUpon>UserControlCanceledBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlMeal.resx">
+      <DependentUpon>UserControlMeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlMealSearch.resx">
+      <DependentUpon>UserControlMealSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlDeliveringBill.resx">
+      <DependentUpon>UserControlDeliveringBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPendingBill.resx">
+      <DependentUpon>UserControlPendingBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPendingMeal.resx">
+      <DependentUpon>UserControlPendingMeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\z0ageb1583189517.jpg" />
+    <None Include="Resources\wrssvt1511556563.jpg" />
+    <None Include="Resources\vtqxtu1511784197.jpg" />
+    <None Include="Resources\uyqrrv1511553350.jpg" />
+    <None Include="Resources\ursuup1487348423.jpg" />
+    <None Include="Resources\sytuqu1511553755.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
